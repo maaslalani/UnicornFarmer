@@ -25,6 +25,8 @@ You should spend a maximum of **10 hours** on this project. Please be sure to ta
 
 - Any CSS/HTML work will be looked at, but will not weigh heavily in your final evaluation. That said, it should still be in good form.
 
+- It is preferred that you do not use a framework, but if you really think it would benefit your use case, please bring the proposal up to your instructor. Be aware that you don't have a lot of time for this project, so it might not be a good idea to learn one if you haven't used it before. If you have used it before, make sure that you still meet the above requirements.
+
 ### Game option
 
 - The game must be live and fully playable by the due date.
@@ -50,6 +52,5 @@ Automatically save the players progress, reloading the page will bring the user 
   - Manipulate DOM elements in some way
   - Implement form elements in some way
   - Must little to no business logic located in your HTML (perhaps just to initialize your app object)
-  - It is preferred that you do not use a framework, but if you really think it would benefit your use case, please bring the proposal up to your instructor. Be aware that you don't have a lot of time for this project, so it might not be a good idea to learn one if you haven't used it before. If you have used it before, make sure that you still meet the above requirements.
 
 - You are strongly discouraged from using jQuery, but if you must, please try to keep its use to a minimum. You *cannot* use Prototype (sorry York!).
