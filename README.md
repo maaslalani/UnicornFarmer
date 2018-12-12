@@ -1,11 +1,21 @@
 # JS Fundamentals Final Project
 
+You'll be developing a JS-based client-side application that is either:
+
+- a game
+- an app
+
+You are completely free to decide what you'd like to build in either category, subject to the requirements below. If you have any concerns or difficulty coming up with something, feel free to speak with your instructor.
+
+## Time Commitment
+
+You should spend a maximum of **10 hours** on this project. Please be sure to take on a realistic amount of work, particularly if it will implement things that you haven't worked with before. 
 
 ## Detailed requirements
 
 ### General
 
-- Follow the Shopify Style Guide (Links to an external site.)Links to an external site. and write the game entirely using JavaScript ES6.
+- Follow the [Shopify Style Guide](https://github.com/Shopify/javascript) (Links to an external site.)Links to an external site. and write the game entirely using JavaScript ES6.
 
 - Make great use of Classes and Object Literals in your code.
 
@@ -42,4 +52,4 @@ Automatically save the players progress, reloading the page will bring the user 
   - Must little to no business logic located in your HTML (perhaps just to initialize your app object)
   - It is preferred that you do not use a framework, but if you really think it would benefit your use case, please bring the proposal up to your instructor. Be aware that you don't have a lot of time for this project, so it might not be a good idea to learn one if you haven't used it before. If you have used it before, make sure that you still meet the above requirements.
 
-- You are strongly discouraged from using jQuery, but if you must, please try to keep its use to a minimum. You *cannot* use Prototype (sorry York...).
+- You are strongly discouraged from using jQuery, but if you must, please try to keep its use to a minimum. You *cannot* use Prototype (sorry York!).
