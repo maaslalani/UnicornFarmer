@@ -15,7 +15,7 @@ You should spend a maximum of **10 hours** on this project. Please be sure to ta
 
 ### General (applies to both options)
 
-- Follow the [Shopify Style Guide](https://github.com/Shopify/javascript) (Links to an external site.)Links to an external site. and write the game entirely using JavaScript ES6.
+- Follow the [Shopify Style Guide](https://github.com/Shopify/javascript).
 
 - Make great use of Classes and Object Literals in your code.
 
