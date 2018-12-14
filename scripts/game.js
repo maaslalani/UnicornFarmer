@@ -12,16 +12,13 @@ function setup() {
   // Load player or create new player.
   player = new Player();
   target.addEventListener('click', () => player.incrementScore(1));
-  for (snack of SNACKS) {
-    let upgrade = document.createElement('p')
-    upgrade.innerHTML = `${snack.name} ${snack.emoji}`
-    snacks.appendChild(upgrade)
-  }
-  for (equipment of EQUIPMENT) {
-    let upgrade = document.createElement('p')
-    upgrade.innerHTML = `${equipment.name} ${equipment.emoji}`
-    equipments.appendChild(upgrade)
-  }
+
+  for (snack of SNACKS)
+    snacks.appendChild(createSnack(snack))
+
+  for (equipment of EQUIPMENT)
+    equipments.appendChild(createEquipment(equipment))
+
 }
 
 function update() {

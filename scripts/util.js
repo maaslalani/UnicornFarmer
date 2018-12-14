@@ -11,6 +11,12 @@ const SNACKS = [
   new Snack({ name: 'Milk', emoji: '🥛', cost: 1000000, efficiency: 0.1 }),
 ]
 
+const createSnack = snack => {
+  let element = document.createElement('div');
+  element.innerHTML = `<p>${snack.name} ${snack.emoji}</p><p>cost: ${snack.cost} 🦄</p><p>efficiency: +${snack.efficiency}</p>`
+  return element
+}
+
 const EQUIPMENT = [
   new Equipment({ name: 'Floppy Disk', emoji: '💾', cost: 100, autonomy: 100 }),
   new Equipment({ name: 'Compact Disk', emoji: '💿', cost: 100, autonomy: 100 }),
@@ -21,3 +27,9 @@ const EQUIPMENT = [
   new Equipment({ name: 'Monitor', emoji: '🖥', cost: 100, autonomy: 100 }),
   new Equipment({ name: 'Smart Watch', emoji: '⌚️', cost: 100, autonomy: 100 }),
 ]
+
+const createEquipment = equipment => {
+  let element = document.createElement('div');
+  element.innerHTML = `<p>${equipment.name} ${equipment.emoji}</p><p>cost: ${equipment.cost} 🦄</p><p>autonomy: +${equipment.autonomy}</p>`
+  return element
+}
