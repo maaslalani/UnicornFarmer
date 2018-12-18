@@ -12,14 +12,14 @@ const SNACKS = [
 ]
 
 const EQUIPMENT = [
-  new Equipment({ name: 'Floppy Disk', emoji: '💾', cost: 100, autonomy: 0.1 }),
-  new Equipment({ name: 'Compact Disk', emoji: '💿', cost: 250, autonomy: 0.25 }),
-  new Equipment({ name: 'Mouse', emoji: '🖱', cost: 1000, autonomy: 1 }),
-  new Equipment({ name: 'Keyboard', emoji: '⌨️', cost: 2000, autonomy: 2 }),
-  new Equipment({ name: 'Phone', emoji: '📱', cost: 5000, autonomy: 5 }),
-  new Equipment({ name: 'Laptop', emoji: '💻', cost: 7500, autonomy: 10 }),
-  new Equipment({ name: 'Monitor', emoji: '🖥', cost: 30000, autonomy: 25 }),
-  new Equipment({ name: 'Smart Watch', emoji: '⌚️', cost: 125000, autonomy: 100 }),
+  new Equipment({ name: 'Floppy Disk', emoji: '💾', cost: 1000, autonomy: 1 }),
+  new Equipment({ name: 'Compact Disk', emoji: '💿', cost: 5000, autonomy: 5 }),
+  new Equipment({ name: 'Mouse', emoji: '🖱', cost: 10000, autonomy: 10 }),
+  new Equipment({ name: 'Keyboard', emoji: '⌨️', cost: 20000, autonomy: 20 }),
+  new Equipment({ name: 'Phone', emoji: '📱', cost: 50000, autonomy: 55 }),
+  new Equipment({ name: 'Laptop', emoji: '💻', cost: 75000, autonomy: 80 }),
+  new Equipment({ name: 'Monitor', emoji: '🖥', cost: 300000, autonomy: 350 }),
+  new Equipment({ name: 'Smart Watch', emoji: '⌚️', cost: 1250000, autonomy: 1500 }),
 ]
 
 const createUpgrade = upgrade => { 
