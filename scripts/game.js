@@ -1,3 +1,4 @@
+// Get references to DOM elements
 const target = document.getElementById('target');
 const score = document.getElementById('score');
 const efficiency = document.getElementById('efficiency');
@@ -7,11 +8,11 @@ const equipments = document.getElementById('equipment');
 
 let player;
 
-// GAME LOOP
+// Setup
 function setup() {
   // Load player or create new player.
   player = new Player();
-  target.addEventListener('click', () => player.incrementScore(1));
+  target.addEventListener('click', () => player.incrementScore(player.efficiency));
 
   for (snack of SNACKS)
     snacks.appendChild(createSnack(snack))
@@ -21,20 +22,24 @@ function setup() {
 
 }
 
+// Update game every frame
 function update() {
-  player.incrementScore(0.5 / FRAMES);
+  player.incrementScore(player.autonomy / FRAMES);
 }
 
+// Draw updated state to page
 function draw() {
   score.innerHTML = parseInt(player.score);
   efficiency.innerHTML = player.efficiency;
-  autonomy.innerHTML = parseInt(player.autonomy);
+  autonomy.innerHTML = player.autonomy;
 }
 
+// GAME LOOP
 function game() {
   update();
   draw();
 }
 
 setup()
+
 setInterval(game, 1000 / FRAMES);
