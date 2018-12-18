@@ -1,5 +1,5 @@
 class Player {
-  constructor({name = 'Anonymous', score = 0, efficiency = 1, autonomy = 0, purchased = []} = {}) {
+  constructor({name = 'Anonymous', score = 0, efficiency = 1, autonomy = 0, purchased = {}} = {}) {
     this.score = score;
     this.name = name;
     this.efficiency = efficiency;
@@ -24,19 +24,26 @@ class Player {
   }
 
   purchase(item) {
+    let { cost, name, efficiency, autonomy } = item;
+
     // Ensure player can afford upgrade
-    if (this.score < item.cost) {
-      alert(`Cannot afford ${item.name} yet, you need ${item.cost - this.score} more unicorns 🦄`)
+    if (this.score < cost) {
+      alert(`Cannot afford ${name} yet, you need ${parseInt(cost - this.score)} more unicorns 🦄`)
       return
     }
 
     // Purchase Item
-    this.decrementScore(item.cost);
+    this.decrementScore(cost);
 
-    item.efficiency && this.incrementEfficiency(item.efficiency);
-    item.autonomy && this.incrementAutonomy(item.autonomy);
+    efficiency && this.incrementEfficiency(efficiency);
+    autonomy && this.incrementAutonomy(autonomy);
 
-    this.purchased.push(item);
+    this.purchased[name] = this.purchase[name] + 1 || 1;
   }
+
+  save() {
+    localStorage.setItem('player', JSON.stringify(this))
+  }
+
 }
 

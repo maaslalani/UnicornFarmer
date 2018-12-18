@@ -11,7 +11,9 @@ let player;
 // Setup
 function setup() {
   // Load player or create new player.
-  player = new Player();
+  let saved = JSON.parse(localStorage.getItem('player'))
+  player = new Player({...saved});
+
   target.addEventListener('click', () => player.incrementScore(player.efficiency));
 
   for (snack of SNACKS)
@@ -20,6 +22,8 @@ function setup() {
   for (equipment of EQUIPMENT)
     equipments.appendChild(createUpgrade(equipment))
 
+  // Save game state every second
+  setInterval(player.save.bind(player), 1000)
 }
 
 // Update game every frame
