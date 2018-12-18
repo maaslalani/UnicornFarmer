@@ -22,49 +22,18 @@ const EQUIPMENT = [
   new Equipment({ name: 'Smart Watch', emoji: '⌚️', cost: 125000, autonomy: 100 }),
 ]
 
-const createSnack = snack => {
+const createUpgrade = upgrade => { 
   let element = document.createElement('div');
-  element.classList.add('snack')
 
-  element.addEventListener('click', () => {
-    // Ensure player can afford upgrade
-    if (player.score < snack.cost) {
-      alert(`You cannot afford ${snack.name} yet, you need ${snack.cost - player.score} more 🦄`)
-      return
-    }
-    player.decrementScore(snack.cost);
-    player.incrementEfficiency(snack.efficiency);
-    player.purchase(snack);
-  })
+  element.classList.add('snack');
+  element.classList.add('equipment');
 
+  element.addEventListener('click', () => player.purchase(upgrade))
+  
   element.innerHTML = `
-    <p>${snack.name} ${snack.emoji}
-      <span class="upgrade">+${snack.efficiency}</span>
-      <span class="cost">${snack.cost}</span>
-    </p>
-  `
-  return element
-}
-
-const createEquipment = equipment => {
-  let element = document.createElement('div');
-  element.classList.add('equipment')
-
-  element.addEventListener('click', () => {
-    // Ensure player can afford upgrade
-    if (player.score < equipment.cost) {
-      alert(`You cannot afford ${equipment.name} yet, you need ${equipment.cost - player.score} more 🦄`)
-      return
-    }
-    player.decrementScore(equipment.cost);
-    player.incrementAutonomy(equipment.autonomy);
-    player.purchase(equipment);
-  })
-
-  element.innerHTML = `
-    <p>${equipment.name} ${equipment.emoji}
-      <span class="upgrade">+${equipment.autonomy}</span>
-      <span class="cost">${equipment.cost}</span>
+    <p>${upgrade.name} ${upgrade.emoji}
+      <span class="upgrade">+${upgrade.autonomy || upgrade.efficiency}</span>
+      <span class="cost">${upgrade.cost}</span>
     </p>
   ` 
   return element

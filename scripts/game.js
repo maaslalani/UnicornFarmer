@@ -15,10 +15,10 @@ function setup() {
   target.addEventListener('click', () => player.incrementScore(player.efficiency));
 
   for (snack of SNACKS)
-    snacks.appendChild(createSnack(snack))
+    snacks.appendChild(createUpgrade(snack))
 
   for (equipment of EQUIPMENT)
-    equipments.appendChild(createEquipment(equipment))
+    equipments.appendChild(createUpgrade(equipment))
 
 }
 

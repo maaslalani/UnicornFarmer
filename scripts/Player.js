@@ -24,6 +24,18 @@ class Player {
   }
 
   purchase(item) {
+    // Ensure player can afford upgrade
+    if (this.score < item.cost) {
+      alert(`Cannot afford ${item.name} yet, you need ${item.cost - this.score} more unicorns 🦄`)
+      return
+    }
+
+    // Purchase Item
+    this.decrementScore(item.cost);
+
+    item.efficiency && this.incrementEfficiency(item.efficiency);
+    item.autonomy && this.incrementAutonomy(item.autonomy);
+
     this.purchased.push(item);
   }
 }
