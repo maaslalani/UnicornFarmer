@@ -1,14 +1,14 @@
 const FRAMES = 24
 
 const SNACKS = [
-  new Snack({ name: 'Cookie', emoji: '🍪', cost: 10, efficiency: 0.1 }),
-  new Snack({ name: 'Popcorn', emoji: '🍿', cost: 100, efficiency: 1.25 }),
-  new Snack({ name: 'Avocado', emoji: '🥑', cost: 250, efficiency: 3.0 }),
-  new Snack({ name: 'Pancakes', emoji: '🥞', cost: 500, efficiency: 7.5 }),
-  new Snack({ name: 'Baguette', emoji: '🥖', cost: 1000, efficiency: 20.0 }),
-  new Snack({ name: 'Taco', emoji: '🌮', cost: 5000, efficiency: 125.0 }),
-  new Snack({ name: 'Doughnut', emoji: '🍩', cost: 100000, efficiency: 2500.0 }),
-  new Snack({ name: 'Milk', emoji: '🥛', cost: 1000000, efficiency: 30000.0 }),
+  new Snack({ name: 'Cookie', emoji: '🍪', cost: 100, efficiency: 1 }),
+  new Snack({ name: 'Popcorn', emoji: '🍿', cost: 1000, efficiency: 15 }),
+  new Snack({ name: 'Avocado', emoji: '🥑', cost: 2500, efficiency: 60 }),
+  new Snack({ name: 'Pancakes', emoji: '🥞', cost: 5000, efficiency: 150 }),
+  new Snack({ name: 'Baguette', emoji: '🥖', cost: 10000, efficiency: 325 }),
+  new Snack({ name: 'Taco', emoji: '🌮', cost: 50000, efficiency: 750 }),
+  new Snack({ name: 'Doughnut', emoji: '🍩', cost: 1000000, efficiency: 1500 }),
+  new Snack({ name: 'Milk', emoji: '🥛', cost: 2500000, efficiency: 5000 }),
 ]
 
 const EQUIPMENT = [
