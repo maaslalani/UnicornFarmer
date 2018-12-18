@@ -24,6 +24,9 @@ function setup() {
 
   // Save game state every second
   setInterval(player.save.bind(player), 1000)
+
+  // Emoji confetti
+  target.addEventListener('click', () => emojify('🦄'))
 }
 
 // Update game every frame

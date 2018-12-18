@@ -38,3 +38,16 @@ const createUpgrade = upgrade => {
   ` 
   return element
 }
+
+const emojify = emoji => {
+  let element = document.createElement('div');
+  element.classList.add('emoji');
+  element.innerHTML = `<p>${emoji}</p>`
+
+  // Add emoji
+  document.body.appendChild(element)
+
+  // Remove emoji after one second
+  setTimeout(() => element.parentNode.removeChild(element), 1000)
+
+}
