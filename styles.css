@@ -5,3 +5,41 @@ body {
 #target {
   font-size: 10em;
 }
+
+.snack, .equipment {
+  display: inline-block;
+
+  padding: 20px;
+  margin: 10px;
+
+  border-width: 2px;
+  border-style: solid;
+  border-color: lightgrey;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  transition: all 100ms;
+}
+
+.snack:hover, .equipment:hover {
+  border-color: grey;
+
+  transition: all 100ms;
+}
+
+.cost {
+  padding: 10px;
+  background-color: pink;
+  border-radius: 5px;
+}
+
+.cost:before {
+  content: ' 🦄 ';
+}
+
+.upgrade {
+  padding: 10px;
+  background-color: lightgreen;
+  border-radius: 5px;
+}
