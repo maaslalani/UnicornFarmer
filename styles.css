@@ -1,5 +1,17 @@
 body {
   font-family: monospace;
+  display: flex;
+  flex: 1;
+  height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  flex: 1;
+}
+
+section {
+  overflow: scroll;
 }
 
 #target {
@@ -10,8 +22,9 @@ body {
   display: flex;
 
   padding-left: 20px;
-  padding-right: 10px;
-  margin: 10px;
+  padding-right: 20px;
+  margin: 20px;
+  margin-left: 0;
 
   border-width: 2px;
   border-style: solid;
@@ -43,7 +56,7 @@ body {
 .cost {
   padding: 10px;
   margin-left: 10px;
-  background-color: pink;
+  background-color: #9adadf;
   border-radius: 5px;
 }
 
@@ -53,11 +66,15 @@ body {
 
 .increase {
   padding: 10px;
-  background-color: lightgreen;
+  background-color: #90eab0;
   border-radius: 5px;
 }
 
-.increase:before {
+#snacks .upgrade .increase:before {
+  content: '🛠';
+}
+
+#equipment .upgrade .increase:before {
   content: '⚙️';
 }
 
