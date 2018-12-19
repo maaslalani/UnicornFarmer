@@ -7,7 +7,7 @@ const SNACKS = [
   new Snack({ name: 'Pancakes', emoji: '🥞', cost: 5000, efficiency: 150 }),
   new Snack({ name: 'Baguette', emoji: '🥖', cost: 10000, efficiency: 325 }),
   new Snack({ name: 'Taco', emoji: '🌮', cost: 50000, efficiency: 750 }),
-  new Snack({ name: 'Doughnut', emoji: '🍩', cost: 1000000, efficiency: 1500 }),
+  new Snack({ name: 'Bagel', emoji: '🥯', cost: 1000000, efficiency: 1500 }),
   new Snack({ name: 'Milk', emoji: '🥛', cost: 2500000, efficiency: 5000 }),
 ]
 
@@ -19,21 +19,21 @@ const EQUIPMENT = [
   new Equipment({ name: 'Phone', emoji: '📱', cost: 50000, autonomy: 55 }),
   new Equipment({ name: 'Laptop', emoji: '💻', cost: 75000, autonomy: 80 }),
   new Equipment({ name: 'Monitor', emoji: '🖥', cost: 300000, autonomy: 350 }),
-  new Equipment({ name: 'Smart Watch', emoji: '⌚️', cost: 1250000, autonomy: 1500 }),
+  new Equipment({ name: 'Watch', emoji: '⌚️', cost: 1250000, autonomy: 1500 }),
 ]
 
 const createUpgrade = upgrade => { 
   let element = document.createElement('div');
 
-  element.classList.add('snack');
-  element.classList.add('equipment');
+  element.classList.add('upgrade');
 
   element.addEventListener('click', () => player.purchase(upgrade))
   
   element.innerHTML = `
-    <p>${upgrade.name} ${upgrade.emoji}
-      <span class="upgrade">+${upgrade.autonomy || upgrade.efficiency}</span>
-      <span class="cost">${upgrade.cost}</span>
+    <p class='purchase'>
+      <span class='name'>${upgrade.name} ${upgrade.emoji}</span>
+      <span class='increase'>+${upgrade.autonomy || upgrade.efficiency}</span>
+      <span class='cost'>${upgrade.cost}</span>
     </p>
   ` 
   return element

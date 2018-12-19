@@ -6,10 +6,11 @@ body {
   font-size: 10em;
 }
 
-.snack, .equipment {
-  display: inline-block;
+.upgrade {
+  display: flex;
 
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 10px;
   margin: 10px;
 
   border-width: 2px;
@@ -22,14 +23,26 @@ body {
   transition: all 100ms;
 }
 
-.snack:hover, .equipment:hover {
+.upgrade:hover {
   border-color: grey;
 
   transition: all 100ms;
 }
 
+.purchase {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.name {
+  flex: 1;
+  padding-right: 20px;
+}
+
 .cost {
   padding: 10px;
+  margin-left: 10px;
   background-color: pink;
   border-radius: 5px;
 }
@@ -38,8 +51,16 @@ body {
   content: ' 🦄 ';
 }
 
-.upgrade {
+.increase {
   padding: 10px;
   background-color: lightgreen;
   border-radius: 5px;
+}
+
+.increase:before {
+  content: '⚙️';
+}
+
+#shop {
+  display: flex;
 }
