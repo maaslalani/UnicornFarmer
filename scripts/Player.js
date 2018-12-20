@@ -9,22 +9,22 @@ class Player {
   
   incrementScore(amount = this.efficiency) {
     this.score += amount;
-    this.score = parseFloat(this.score.toFixed(2));
+    this.score = round(this.score);
   }
 
   decrementScore(amount) {
     this.score -= amount;
-    this.score = parseFloat(this.score.toFixed(2));
+    this.score = round(this.score);
   }
 
   incrementEfficiency(amount) {
     this.efficiency += amount;
-    this.efficiency = parseFloat(this.efficiency.toFixed(2));
+    this.efficiency = round(this.efficiency);
   }
 
   incrementAutonomy(amount) {
     this.autonomy += amount;
-    this.autonomy = parseFloat(this.autonomy.toFixed(2));
+    this.autonomy = round(this.autonomy);
   }
 
   purchase(item) {
@@ -48,5 +48,10 @@ class Player {
   save() {
     localStorage.setItem('player', JSON.stringify(this))
   }
+
+  static round(number) {
+    return parseFloat(number.toFixed(2));
+  }
+
 
 }
