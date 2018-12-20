@@ -1,6 +1,8 @@
 // Get references to DOM elements
 const target = document.getElementById('target');
 const score = document.getElementById('score');
+const price = document.getElementById('price');
+const stocks = document.getElementById('stocks');
 const efficiency = document.getElementById('efficiency');
 const autonomy = document.getElementById('autonomy');
 const snacks = document.getElementById('snacks');
@@ -8,9 +10,13 @@ const equipments = document.getElementById('equipment');
 const upgrades = document.getElementsByClassName('upgrade');
 
 let player;
+let stockPrice;
 
 // Setup
 function setup() {
+  // Set stock price
+  stockPrice = JSON.parse(localStorage.getItem('stockPrice')) || 1000;
+
   // Load player or create new player.
   let saved = JSON.parse(localStorage.getItem('player'));
   player = new Player({...saved});
@@ -33,6 +39,7 @@ function setup() {
 // Update game every frame
 function update() {
   player.incrementScore(player.autonomy / FRAMES);
+  stockPrice = fluctuate(stockPrice);
 }
 
 // Draw updated state to page
@@ -40,12 +47,19 @@ function draw() {
   score.innerHTML = parseInt(player.score);
   efficiency.innerHTML = player.efficiency.toFixed(2);
   autonomy.innerHTML = player.autonomy;
+  stocks.innerHTML = player.stocks;
+  price.innerHTML = stockPrice;
+}
+
+function save() {
+  localStorage.setItem('stockPrice', JSON.stringify(stockPrice));
 }
 
 // GAME LOOP
 function game() {
   update();
   draw();
+  save();
 }
 
 setup();

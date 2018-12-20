@@ -5,5 +5,18 @@
   padding-left: var(--spacing);
 }
 
-#stocks {}
+#stocks, button {
+  font-family: 'Fira Mono';
+}
+
+#price {
+  display: block;
+  font-size: 2em;
+  margin-top: var(--spacing);
+  margin-bottom: var(--spacing);
+}
+
+#price:before {
+  content: '🦄 ';
+}
 
