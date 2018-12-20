@@ -22,13 +22,21 @@
 
   <section class="stock-market">
     <h2>Stock Market 💸</h2>
-    <div id="stocks">
-      <p>Current Stock Price: $<span id="price">0</span></p>
-      <p>🌽 corns: <span id="stocks">0</span></p>
-      <div id="purchase">
-      </div>
-      <div id="sell">
-      </div>
+    <p>Current Stock Price: <span id="price">0</span></p>
+    <p>🌽 corns: <span id="stocks">0</span></p>
+    <div id="purchase">
+      <h3>Purchase</h3>
+      <button onclick="player.invest(1)">+1</button>
+      <button onclick="player.invest(10)">+10</button>
+      <button onclick="player.invest(100)">+100</button>
+      <button onclick="player.invest(1000)">+1000</button>
+    </div>
+    <div id="sell">
+      <h3>Sell</h3>
+      <button onclick="player.liquidate(1)">-1</button>
+      <button onclick="player.liquidate(10)">-10</button>
+      <button onclick="player.liquidate(100)">-100</button>
+      <button onclick="player.liquidate(1000)">-1000</button>
     </div>
   </section>
 
