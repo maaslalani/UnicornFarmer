@@ -64,3 +64,5 @@ const emojify = (event, emoji) => {
   // Remove emoji after half a second
   setTimeout(() => element.parentNode.removeChild(element), 500)
 }
+
+const round = number => parseFloat(number.toFixed(2));

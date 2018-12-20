@@ -49,9 +49,4 @@ class Player {
     localStorage.setItem('player', JSON.stringify(this))
   }
 
-  static round(number) {
-    return parseFloat(number.toFixed(2));
-  }
-
-
 }
