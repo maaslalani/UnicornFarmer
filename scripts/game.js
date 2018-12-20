@@ -5,6 +5,7 @@ const efficiency = document.getElementById('efficiency');
 const autonomy = document.getElementById('autonomy');
 const snacks = document.getElementById('snacks');
 const equipments = document.getElementById('equipment');
+const upgrades = document.getElementsByClassName('upgrade');
 
 let player;
 
@@ -17,16 +18,16 @@ function setup() {
   target.addEventListener('click', () => player.incrementScore(player.efficiency));
 
   for (snack of SNACKS)
-    snacks.appendChild(createUpgrade(snack))
+    snacks.appendChild(createUpgrade(snack));
 
   for (equipment of EQUIPMENT)
-    equipments.appendChild(createUpgrade(equipment))
+    equipments.appendChild(createUpgrade(equipment));
 
   // Save game state every second
-  setInterval(player.save.bind(player), 1000)
+  setInterval(player.save.bind(player), 1000);
 
   // Emoji confetti
-  target.addEventListener('click', () => emojify('🦄'))
+  target.addEventListener('click', event => emojify(event, '🦄'));
 }
 
 // Update game every frame
@@ -37,7 +38,7 @@ function update() {
 // Draw updated state to page
 function draw() {
   score.innerHTML = parseInt(player.score);
-  efficiency.innerHTML = player.efficiency;
+  efficiency.innerHTML = player.efficiency.toFixed(2);
   autonomy.innerHTML = player.autonomy;
 }
 
@@ -47,6 +48,6 @@ function game() {
   draw();
 }
 
-setup()
+setup();
 
 setInterval(game, 1000 / FRAMES);
