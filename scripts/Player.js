@@ -1,5 +1,5 @@
 class Player {
-  constructor({name = 'Anonymous', score = 0, efficiency = 1, autonomy = 0, purchased = {}} = {}) {
+  constructor({ name = 'Anonymous', score = 0, efficiency = 1, autonomy = 0, purchased = {} }) {
     this.score = score;
     this.name = name;
     this.efficiency = efficiency;
