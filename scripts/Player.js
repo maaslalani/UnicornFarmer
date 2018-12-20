@@ -9,18 +9,22 @@ class Player {
   
   incrementScore(amount = this.efficiency) {
     this.score += amount;
+    this.score = parseFloat(this.score.toFixed(2));
   }
 
   decrementScore(amount) {
-    this.score -= amount
+    this.score -= amount;
+    this.score = parseFloat(this.score.toFixed(2));
   }
 
   incrementEfficiency(amount) {
     this.efficiency += amount;
+    this.efficiency = parseFloat(this.efficiency.toFixed(2));
   }
 
   incrementAutonomy(amount) {
     this.autonomy += amount;
+    this.autonomy = parseFloat(this.autonomy.toFixed(2));
   }
 
   purchase(item) {
@@ -46,4 +50,3 @@ class Player {
   }
 
 }
-
