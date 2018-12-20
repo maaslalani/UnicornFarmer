@@ -8,23 +8,19 @@ class Player {
   }
   
   incrementScore(amount = this.efficiency) {
-    this.score += amount;
-    this.score = round(this.score);
+    this.score += round(amount);
   }
 
   decrementScore(amount) {
-    this.score -= amount;
-    this.score = round(this.score);
+    this.score -= round(amount);
   }
 
   incrementEfficiency(amount) {
-    this.efficiency += amount;
-    this.efficiency = round(this.efficiency);
+    this.efficiency += round(amount);
   }
 
   incrementAutonomy(amount) {
-    this.autonomy += amount;
-    this.autonomy = round(this.autonomy);
+    this.autonomy += round(amount);
   }
 
   purchase(item) {
