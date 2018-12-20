@@ -24,6 +24,30 @@ class Player {
     this.autonomy += round(amount);
   }
 
+  invest(quantity) {
+    let total = stockPrice * quantity;
+
+    if (total > this.score) {
+      alert(`You cannot afford to purchase ${quantity} stocks 🌽. You need ${parseInt(total - this.score)} more unicorns 🦄.`)
+      return
+    }
+
+    this.score -= total;
+    this.stocks += quantity;
+  }
+
+  liquidate(quantity) {
+    let total = stockPrice * quantity;
+
+    if (quantity > this.stocks) {
+      alert(`You cannot sell ${quantity} stocks 🌽. You only have ${this.stocks} stocks 🌽.`)
+      return
+    }
+
+    this.score += total;
+    this.stocks -= quantity;
+  }
+
   purchase(item) {
     let { cost, name, efficiency, autonomy } = item;
 
