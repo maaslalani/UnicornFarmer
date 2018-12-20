@@ -1,0 +1,18 @@
+#target {
+  padding: 20px;
+  display: inline-block;
+  cursor: pointer;
+
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.emoji {
+  font-size: 2em;
+
+  position: absolute;
+
+  transition: all 500ms;
+}
