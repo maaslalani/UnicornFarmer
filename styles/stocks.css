@@ -1,6 +1,8 @@
 .stock-market {
-  padding-left: 100px;
-  padding-right: 100px;
+  margin-left: var(--increased-spacing);
+  margin-right: var(--increased-spacing);
+  padding-right: var(--spacing);
+  padding-left: var(--spacing);
 }
 
 #stocks {}

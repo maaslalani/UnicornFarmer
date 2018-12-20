@@ -1,5 +1,5 @@
 #target {
-  padding: 20px;
+  padding: var(--spacing);
   display: inline-block;
   cursor: pointer;
 

@@ -1,11 +1,9 @@
-:root {
-  --radius: 5px;
-  --spacing: 20px;
-  --reduced-spacing: 10px;
-}
-
 #shop, .upgrade, .purchase {
   display: flex;
+}
+
+#shop {
+  padding-bottom: var(--spacing);
 }
 
 .name, .purchase {
