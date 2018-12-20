@@ -5,3 +5,4 @@ class Upgrade {
     this.cost = cost;
   }
 }
+

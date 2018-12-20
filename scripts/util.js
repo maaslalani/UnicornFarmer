@@ -11,7 +11,7 @@ const SNACKS = [
   new Snack({ name: 'Taco', emoji: '🌮', cost: 5000, efficiency: 75 }),
   new Snack({ name: 'Bagel', emoji: '🥯', cost: 10000, efficiency: 150 }),
   new Snack({ name: 'Milk', emoji: '🥛', cost: 250000, efficiency: 5000 }),
-]
+];
 
 const EQUIPMENT = [
   new Equipment({ name: 'Floppy Disk', emoji: '💾', cost: 100, autonomy: 1 }),
@@ -22,13 +22,13 @@ const EQUIPMENT = [
   new Equipment({ name: 'Laptop', emoji: '💻', cost: 7500, autonomy: 80 }),
   new Equipment({ name: 'Monitor', emoji: '🖥', cost: 30000, autonomy: 350 }),
   new Equipment({ name: 'Watch', emoji: '⌚️', cost: 125000, autonomy: 1500 }),
-]
+];
 
 const createUpgrade = upgrade => { 
   let element = document.createElement('div');
   element.classList.add('upgrade');
 
-  element.addEventListener('click', () => player.purchase(upgrade))
+  element.addEventListener('click', () => player.purchase(upgrade));
   
   element.innerHTML = `
     <p class='purchase'>
@@ -36,8 +36,8 @@ const createUpgrade = upgrade => {
       <span class='increase'>+${upgrade.autonomy || upgrade.efficiency}</span>
       <span class='cost'>${upgrade.cost}</span>
     </p>
-  ` 
-  return element
+  `;
+  return element;
 }
 
 const emojify = (event, emoji) => {
@@ -47,22 +47,23 @@ const emojify = (event, emoji) => {
   element.innerHTML = emoji;
 
   // Position emoji
-  let { clientX, clientY } = event
-  let { random } = Math
+  let { clientX, clientY } = event;
+  let { random } = Math;
 
-  let x = clientX + (random() - 1) * RANDOMNESS
-  let y = clientY + (random() - 1) * RANDOMNESS
+  let x = clientX + (random() - 1) * RANDOMNESS;
+  let y = clientY + (random() - 1) * RANDOMNESS;
 
   element.style.left = `${x}px`;
   element.style.top = `${y}px`;
 
   // Add emoji
-  target.appendChild(element)
+  target.appendChild(element);
 
   setTimeout(() => element.style.opacity = 0, DELAY);
 
   // Remove emoji after half a second
-  setTimeout(() => element.parentNode.removeChild(element), 500)
+  setTimeout(() => element.parentNode.removeChild(element), 500);
 }
 
 const round = number => parseFloat(number.toFixed(2));
+

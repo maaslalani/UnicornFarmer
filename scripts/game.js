@@ -12,7 +12,7 @@ let player;
 // Setup
 function setup() {
   // Load player or create new player.
-  let saved = JSON.parse(localStorage.getItem('player'))
+  let saved = JSON.parse(localStorage.getItem('player'));
   player = new Player({...saved});
 
   target.addEventListener('click', () => player.incrementScore(player.efficiency));
@@ -51,3 +51,4 @@ function game() {
 setup();
 
 setInterval(game, 1000 / FRAMES);
+

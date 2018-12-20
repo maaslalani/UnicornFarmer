@@ -4,3 +4,4 @@ class Snack extends Upgrade {
     this.efficiency = efficiency;
   }
 }
+

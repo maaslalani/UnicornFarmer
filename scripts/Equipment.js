@@ -4,3 +4,4 @@ class Equipment extends Upgrade {
     this.autonomy = autonomy;
   }
 }
+
