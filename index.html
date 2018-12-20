@@ -3,31 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <title>Shopify Clicker</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/shop.css">
+  <link rel="stylesheet" href="styles/stocks.css">
+  <link rel="stylesheet" href="styles/clicker.css">
 </head>
 <body>
   <main>
     <h1>Shopicorn Collector</h1>
-
     <div id="target">
-      🦄
+      <img src="assets/shopify.png" alt="Shopify Logo" draggable="false">
     </div>
-
-    <p>🦄unicorns: <span id="score">0</span> </p>
-    <p>🛠efficiency: <span id="efficiency">1</span> </p>
-    <p>⚙️autonomy: <span id="autonomy">0</span> </p>
+    <p>🦄 unicorns: <span id="score">0</span> </p>
+    <p>🛠 efficiency: <span id="efficiency">1</span> </p>
+    <p>⚙️ autonomy: <span id="autonomy">0</span> </p>
   </main>
 
-  <section>
+  <section class="stock-market">
+    <h2>Stock Market 💸</h2>
+    <div id="stocks">
+      <p>Current Stock Price: $<span id="price">0</span></p>
+      <p>🌽 corns: <span id="stocks">0</span></p>
+      <div id="purchase">
+      </div>
+      <div id="sell">
+      </div>
+    </div>
+  </section>
+
+  <section class="shop">
     <h2>Shop 🛒</h2>
     <div id="shop">
-      <div>
-        <div id="snacks">
-          <h3>Snacks</h3>
-        </div>
-        <div id="equipment">
-          <h3>Equipment</h3>
-        </div>
+      <div id="snacks">
+        <h3>Snacks</h3>
+      </div>
+      <div id="equipment">
+        <h3>Equipment</h3>
       </div>
     </div>
   </section>
