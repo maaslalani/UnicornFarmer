@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono');
+
+body {
+  display: flex;
+
+  padding: var(--spacing);
+  padding-right: 0;
+  margin: 0;
+
+  font-family: 'Fira Mono';
+  font-size: 12px;
+
+  height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  flex: 1;
+}
+
+section {
+  overflow: scroll;
+}
+
+h1 {
+  font-size: 2em;
+}

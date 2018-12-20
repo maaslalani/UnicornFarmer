@@ -1,0 +1,68 @@
+#shop, .upgrade, .purchase {
+  display: flex;
+}
+
+#shop {
+  padding-bottom: var(--spacing);
+}
+
+.name, .purchase {
+  flex: 1;
+}
+
+.upgrade {
+  padding-left: var(--spacing);
+  padding-right: var(--reduced-spacing);
+  margin: var(--spacing);
+  margin-left: 0;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: lightgrey;
+  border-radius: var(--radius);
+
+  cursor: pointer;
+
+  transition: all 100ms;
+}
+
+.upgrade:hover {
+  border-color: darkgrey;
+}
+
+.purchase {
+  align-items: center;
+}
+
+.name {
+  margin-right: var(--spacing);
+}
+
+.cost {
+  padding: var(--reduced-spacing);
+
+  border-radius: var(--radius);
+
+  background-color: #BEE7EA;
+}
+
+.increase {
+  padding: var(--reduced-spacing);
+  margin-right: var(--reduced-spacing);
+
+  border-radius: var(--radius);
+
+  background-color: #AEEFC5;
+}
+
+.cost:before {
+  content: ' 🦄 ';
+}
+
+#snacks .increase:before {
+  content: '🛠 ';
+}
+
+#equipment .increase:before {
+  content: '⚙️ ';
+}
