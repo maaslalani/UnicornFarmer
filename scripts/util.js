@@ -2,6 +2,7 @@ const FRAMES = 24;
 const RANDOMNESS = 25;
 const DELAY = 100;
 
+// List of purchasable snacks
 const SNACKS = [
   new Snack({ name: 'Cookie', emoji: '🍪', cost: 10, efficiency: 0.1 }),
   new Snack({ name: 'Popcorn', emoji: '🍿', cost: 100, efficiency: 1.25 }),
@@ -13,6 +14,7 @@ const SNACKS = [
   new Snack({ name: 'Milk', emoji: '🥛', cost: 250000, efficiency: 5000 }),
 ];
 
+// List of purchasable equipment
 const EQUIPMENT = [
   new Equipment({ name: 'Floppy Disk', emoji: '💾', cost: 100, autonomy: 1 }),
   new Equipment({ name: 'Compact Disk', emoji: '💿', cost: 500, autonomy: 5 }),
@@ -24,10 +26,11 @@ const EQUIPMENT = [
   new Equipment({ name: 'Watch', emoji: '⌚️', cost: 125000, autonomy: 1500 }),
 ];
 
+// Create an upgrade component and add it to the store
 const createUpgrade = upgrade => { 
   let element = document.createElement('div');
-  element.classList.add('upgrade');
 
+  element.classList.add('upgrade');
   element.addEventListener('click', () => player.purchase(upgrade));
   
   element.innerHTML = `
@@ -67,3 +70,33 @@ const emojify = (event, emoji) => {
 
 const round = number => parseFloat(number.toFixed(2));
 
+const fluctuate = number =>
+  Math.round(Math.random() > 0.5
+    ? number - Math.random() * RANDOMNESS
+    : number + Math.random() * RANDOMNESS);
+
+const reset = () => {
+  localStorage.clear();
+  location.reload();
+}
+
+// Cheat codes
+function tobi() {
+  stockPrice = 1000000;
+}
+
+function dan() {
+  player.score += 10000;
+}
+
+function giveMeStockOptions() {
+  player.stocks += 100;
+}
+
+function jonathan() {
+  player.efficiency += 100;
+}
+
+function alison() {
+  player.autonomy += 500;
+}
