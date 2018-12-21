@@ -1,5 +1,5 @@
 class Player {
-  constructor({ name = 'Anonymous', score = 0, efficiency = 1, autonomy = 0, stocks = 0, purchased = {} }) {
+  constructor({name = 'Anonymous', score = 0, efficiency = 1, autonomy = 0, stocks = 0, purchased = {}}) {
     this.score = score;
     this.name = name;
     this.efficiency = efficiency;
@@ -7,7 +7,7 @@ class Player {
     this.purchased = purchased;
     this.stocks = stocks;
   }
-  
+
   incrementScore(amount = this.efficiency) {
     this.score += round(amount);
   }
@@ -25,11 +25,11 @@ class Player {
   }
 
   invest(quantity) {
-    let total = stockPrice * quantity;
+    const total = stockPrice * quantity;
 
     if (total > this.score) {
-      alert(`You cannot afford to purchase ${quantity} stocks 🌽. You need ${parseInt(total - this.score)} more unicorns 🦄.`)
-      return
+      alert(`You cannot afford to purchase ${quantity} stocks 🌽. You need ${parseInt(total - this.score)} more unicorns 🦄.`);
+      return;
     }
 
     this.score -= total;
@@ -49,7 +49,7 @@ class Player {
   }
 
   purchase(item) {
-    let { cost, name, efficiency, autonomy } = item;
+    const {cost, name, efficiency, autonomy} = item;
 
     // Ensure player can afford upgrade
     if (this.score < cost) {
@@ -60,8 +60,8 @@ class Player {
     // Purchase Item
     this.decrementScore(cost);
 
-    efficiency && this.incrementEfficiency(efficiency);
-    autonomy && this.incrementAutonomy(autonomy);
+    if (efficiency) { this.incrementEfficiency(efficiency); }
+    if (autonomy) { this.incrementAutonomy(autonomy); }
 
     this.purchased[name] = this.purchase[name] + 1 || 1;
   }

@@ -7,7 +7,6 @@ const efficiency = document.getElementById('efficiency');
 const autonomy = document.getElementById('autonomy');
 const snacks = document.getElementById('snacks');
 const equipments = document.getElementById('equipment');
-const upgrades = document.getElementsByClassName('upgrade');
 
 let player;
 let stockPrice;
@@ -18,22 +17,20 @@ function setup() {
   stockPrice = JSON.parse(localStorage.getItem('stockPrice')) || 1000;
 
   // Load player or create new player.
-  let saved = JSON.parse(localStorage.getItem('player'));
+  const saved = JSON.parse(localStorage.getItem('player'));
   player = new Player({...saved});
 
   target.addEventListener('click', () => player.incrementScore(player.efficiency));
 
-  for (snack of SNACKS)
-    snacks.appendChild(createUpgrade(snack));
-
-  for (equipment of EQUIPMENT)
-    equipments.appendChild(createUpgrade(equipment));
+  // Populate upgrades
+  for (snack of SNACKS) { snacks.appendChild(createUpgrade(snack)); }
+  for (equipment of EQUIPMENT) { equipments.appendChild(createUpgrade(equipment)); }
 
   // Save game state every second
   setInterval(player.save.bind(player), 1000);
 
   // Emoji confetti
-  target.addEventListener('click', event => emojify(event, '🦄'));
+  target.addEventListener('click', (evt) => emojify(evt, '🦄'));
 }
 
 // Update game every frame
