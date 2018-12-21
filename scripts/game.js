@@ -41,7 +41,7 @@ function update() {
 
 // Draw updated state to page
 function draw() {
-  score.innerHTML = parseInt(player.score);
+  score.innerHTML = parseInt(player.score, 10);
   efficiency.innerHTML = player.efficiency.toFixed(2);
   autonomy.innerHTML = player.autonomy;
   stocks.innerHTML = player.stocks;

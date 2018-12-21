@@ -28,7 +28,7 @@ class Player {
     const total = stockPrice * quantity;
 
     if (total > this.score) {
-      alert(`You cannot afford to purchase ${quantity} stocks 🌽. You need ${parseInt(total - this.score)} more unicorns 🦄.`);
+      alert(`You cannot afford to purchase ${quantity} stocks 🌽. You need ${parseInt(total - this.score, 10)} more unicorns 🦄.`);
       return;
     }
 
@@ -53,7 +53,7 @@ class Player {
 
     // Ensure player can afford upgrade
     if (this.score < cost) {
-      alert(`Cannot afford ${name} yet, you need ${parseInt(cost - this.score)} more unicorns 🦄`);
+      alert(`Cannot afford ${name} yet, you need ${parseInt(cost - this.score, 10)} more unicorns 🦄`);
       return;
     }
 
