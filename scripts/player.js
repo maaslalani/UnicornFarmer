@@ -37,11 +37,11 @@ class Player {
   }
 
   liquidate(quantity) {
-    let total = stockPrice * quantity;
+    const total = stockPrice * quantity;
 
     if (quantity > this.stocks) {
-      alert(`You cannot sell ${quantity} stocks 🌽. You only have ${this.stocks} stocks 🌽.`)
-      return
+      alert(`You cannot sell ${quantity} stocks 🌽. You only have ${this.stocks} stocks 🌽.`);
+      return;
     }
 
     this.score += total;

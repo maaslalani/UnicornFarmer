@@ -32,7 +32,7 @@ const createUpgrade = (upgrade) => {
 
   element.classList.add('upgrade');
   element.addEventListener('click', () => player.purchase(upgrade));
- 
+
   element.innerHTML = `
     <p class='purchase'>
       <span class='name'>${upgrade.name} ${upgrade.emoji}</span>
@@ -51,10 +51,9 @@ const emojify = (evt, emoji) => {
 
   // Position emoji
   const {clientX, clientY} = evt;
-  const {random} = Math;
 
-  const x = clientX + (random() - 1) * RANDOMNESS;
-  const y = clientY + (random() - 1) * RANDOMNESS;
+  const x = clientX + ((Math.random() - 1) * RANDOMNESS);
+  const y = clientY + ((Math.random() - 1) * RANDOMNESS);
 
   element.style.left = `${x}px`;
   element.style.top = `${y}px`;
@@ -62,41 +61,24 @@ const emojify = (evt, emoji) => {
   // Add emoji
   target.appendChild(element);
 
-  setTimeout(() => {element.style.opacity = 0}, DELAY);
+  // Make the emoji fade away using CSS transitions
+  setTimeout(() => { element.style.opacity = 0; }, DELAY);
 
   // Remove emoji after half a second
-  setTimeout(() => element.parentNode.removeChild(element), 500);
+  setTimeout(() => { element.parentNode.removeChild(element); }, 500);
 };
 
 const round = (number) => parseFloat(number.toFixed(2));
 
 const fluctuate = (number) =>
   Math.round(Math.random() > 0.5
-    ? number - Math.random() * RANDOMNESS
-    : number + Math.random() * RANDOMNESS);
-
-const reset = () => {
-  localStorage.clear();
-  location.reload();
-};
+    ? number - (Math.random() * RANDOMNESS)
+    : number + (Math.random() * RANDOMNESS));
 
 // Cheat codes
-function tobi() {
-  stockPrice = 1000000;
-}
+function alison() { player.autonomy += 500; }
+function dan() { player.score += 10000; }
+function jonathan() { player.efficiency += 100; }
+function tobi() { stockPrice = 1000000; }
+function giveMeStockOptions() { player.stocks += 100; }
 
-function dan() {
-  player.score += 10000;
-}
-
-function giveMeStockOptions() {
-  player.stocks += 100;
-}
-
-function jonathan() {
-  player.efficiency += 100;
-}
-
-function alison() {
-  player.autonomy += 500;
-}
