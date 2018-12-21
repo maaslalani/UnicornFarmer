@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "eslint": "^5.10.0",
+    "eslint-plugin-shopify": "^26.1.1"
+  }
+}
