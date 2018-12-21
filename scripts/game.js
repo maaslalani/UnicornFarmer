@@ -39,7 +39,7 @@ function setup() {
 // Update game every frame
 function update() {
   player.incrementScore(player.autonomy / FRAMES);
-  stockPrice = fluctuate(stockPrice);
+  stockPrice = fluctuate(Math.max(stockPrice, RANDOMNESS));
 }
 
 // Draw updated state to page
