@@ -30,6 +30,7 @@
       <button onclick="player.invest(10)">+10</button>
       <button onclick="player.invest(100)">+100</button>
       <button onclick="player.invest(1000)">+1000</button>
+      <button onclick="player.invest(Math.floor(player.score/stockPrice))">+max</button>
     </div>
     <div id="sell">
       <h3>Sell</h3>
@@ -37,6 +38,7 @@
       <button onclick="player.liquidate(10)">-10</button>
       <button onclick="player.liquidate(100)">-100</button>
       <button onclick="player.liquidate(1000)">-1000</button>
+      <button onclick="player.liquidate(Math.floor(player.stocks))">-max</button>
     </div>
   </section>
 
@@ -52,10 +54,10 @@
     </div>
   </section>
 
+  <script src="scripts/player.js"></script>
   <script src="scripts/upgrade.js"></script>
   <script src="scripts/snack.js"></script>
   <script src="scripts/equipment.js"></script>
-  <script src="scripts/player.js"></script>
   <script src="scripts/util.js"></script>
   <script src="scripts/game.js"></script>
 </body>
