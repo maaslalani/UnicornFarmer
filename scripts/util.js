@@ -76,9 +76,8 @@ const fluctuate = (number) =>
     : number + (Math.random() * RANDOMNESS));
 
 // Cheat codes
-function alison() { player.autonomy += 500; }
-function dan() { player.score += 10000; }
-function jonathan() { player.efficiency += 100; }
+function alison() { player.autonomy += 5000; }
+function dan() { player.score += 50000; }
+function jonathan() { player.efficiency += 5000; }
 function tobi() { stockPrice = 1000000; }
-function giveMeStockOptions() { player.stocks += 100; }
 
