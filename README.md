@@ -1,56 +1,61 @@
-# JS Fundamentals Final Project
+## Usage
+To play the Shopify Unicorn Collector game simply visit [maaslalani.github.io/UnicornFarmer](https://maaslalani.github.io/UnicornFarmer). Alternatively, you can clone this project and run it locally.
 
-You'll be developing a JS-based client-side application that is either:
+## Gameplay
+The premise of the game is simple and generally follows the gameplay most cookie clicker games. To accumulate unicorns simply click the Shopify bag. Each click you perform will add a certain number of unicorns to your player's score.
 
-- a game
-- an app
+![Shopify Bag](https://maaslalani.github.io/UnicornFarmer/assets/shopify.png)
 
-You are completely free to decide what you'd like to build in either category, subject to the requirements below. If you have any concerns or difficulty coming up with something, feel free to speak with your instructor.
+### Shop
+The shop is where you can use your unicorns to purchase upgrades to help you get more unicorns in the long term.
+> Build for the long term.
 
-## Time Commitment
+#### Snacks
+Purchasing snacks will increase your `efficiency 🛠`. Your efficiency score determines how many unicorns you receive for every click on the Shopify bag. A player will start off with 1 efficiency and can purchase snacks to increase this number. For example, if you have 1000 unicorns 🦄 and your first snack purchase is a baguette 🥖 your efficiency will increase by 15 🛠. So now every time you click the Shopify bag you will receive 16 unicorns 🦄 (including one unicorn every player starts with).
 
-You should spend a maximum of **10 hours** on this project. Please be sure to take on a realistic amount of work, particularly if it will implement things that you haven't worked with before. 
+Here are what the different snacks cost and the increase in efficiency they offer.
 
-## Detailed requirements
+| Snack | Emoji | Efficiency 🛠 | Cost 🦄 |
+|-------|:-----:|---------------|---------|
+| Cookie |🍪| +0.1 | 10 |
+| Popcorn |🍿| +1.25 | 100 |
+| Avocado |🥑| +2.5 | 200 |
+| Pancakes |🥞| +7.5 | 500 |
+| Baguette |🥖| +15 | 1000 |
+| Taco |🌮| +75 | 5000 |
+| Bagel |🥯| +150 | 10000 |
+| Milk |🥛| +5000 | 250000 |
 
-### General (applies to both options)
+#### Equipment
+Purchasing equipment gives will increase your `autonomy ⚙️`. Your autonomy score determines how many unicorns you receive every second that the game progresses for. A player will start off with 0 autonomy meaning they will not receive any unicorns automatically. A player can purchase equipment to increase their autonomy. For example, if you have 100 unicorns 🦄 you can purchase a Floppy Disk 💾 which will increase your autonomy by 1 ⚙️. So now every second you are playing the game, you will receive 1 unicorn automatically.
 
-- Follow the [Shopify Style Guide](https://github.com/Shopify/javascript).
+Here are what the different equipment cost and the increase in autonomy they offer.
 
-- Make great use of Classes and Object Literals in your code.
+| Equipment | Emoji | Autonomy ⚙️ | Cost 🦄 |
+|-----------|:-----:|------------|---------|
+| Floppy Disk |💾| +1 | 100 |
+| Compact Disk |💿| +5 | 500 |
+| Mouse |🖱| +10 | 1000 |
+| Keyboard |⌨️| +20 | 2000 |
+| Phone |📱| +55 | 5000 |
+| Laptop |💻| +80 | 7500 |
+| Monitor |🖥| +350 | 30000 |
+| Watch |⌚️| +1500 | 125000 |
 
-- Your code is written in multiple .js files if/when appropriate, through use of modules
+### Stock Market
+In this game you are able to buy corns 🌽 for a certain number of unicorns 🦄 at any point. The price of one corn fluctuates very rapidly. The purpose of these corns is to buy them at a low price and hope that over time they increase in price so that you can make a profit when they are sold. The Stock Market is a risky investment and often a gamble in this game. The price fluctuates by a random amount between -25 and +25. The functionality of the stock market simulates heavily volatile day trading.
 
-- Your code is commented properly and is easy to follow.
+## Cheat Codes
+There are several cheat codes that can advance you unfairly in the game. Don't cheat, you shouldn't take shortcuts.
 
-- Any CSS/HTML work will be looked at, but will not weigh heavily in your final evaluation. That said, it should still be in good form.
+Typing `dan()` in the console will give the player an additional 50,000 unicorns.
+Typing `alison()` in the console will give the player an additional 5,000 autonomy.
+Typing `jonathan()` in the console will give the player an additional 5,000 efficiency.
+Typing `tobi()` in the console will make the stock price of one corn equal to 1,000,000.
 
-- It is preferred that you do not use a framework, but if you really think it would benefit your use case, please bring the proposal up to your instructor. Be aware that you don't have a lot of time for this project, so it might not be a good idea to learn one if you haven't used it before. If you have used it before, make sure that you still meet the above requirements.
-
-- You are strongly discouraged from using jQuery, but if you must, please try to keep its use to a minimum. You *cannot* use Prototype (sorry York!).
-
-### Game option
-
-- The game must be live and fully playable by the due date.
-
-- The game follows traditional Clicker mechanics (ie: you click things, numbers go up, gameplay expands overtime)
-
-- The game must have an ending and / or goal.
-Automatically save the players progress, reloading the page will bring the user where they left off.
-
-- Create cheating functions that allow you to test and demo aspects of the game through the console.
-
-- The game must listen for some type of Input Event from the user and act upon it.
-
-### App option
-
-- Your app's use case should be mostly front-end focused and have a rich, interactive UI. If anything, you can create a simple web server to allow you to run off of `localhost` (which can help with CORS issues).
-
-- Given the above, if there is anything you need to save during a session, just use `localstorage` instead of a back-end database/datafile.
-
-- As a minimum, the app must:
-  - Make an Ajax request
-  - Have event listeners
-  - Manipulate DOM elements in some way
-  - Implement form elements in some way
-  - Must little to no business logic located in your HTML (perhaps just to initialize your app object)
+## Next Steps
+* Make equipment more expensive the more you buy
+* Make snacks more expensive the more you buy
+* Add more variety of stocks
+* Add things you can buy with corns
+* Implement AI which finds out which are the best strategies to winning the game
